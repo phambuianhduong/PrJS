@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ex</title>
+<script type="text/javascript">
+	var fullname = " ";
+	String.prototype.splitname = function(){
+		
+		var first_space = fullname.indexOf(" ");
+		var last_space = fullname.lastIndexOf(" ");
+		var result;
+		result = "Ho : " + fullname.slice(0,first_space) + "<br>";
+		result += "Ho lot : " + fullname.slice(first_space,last_space)+"<br>";
+		result +="Ten : " + fullname.slice(last_space);
+		return result;
+		}
+	function myname(){
+		
+		fullname = document.getElementById("full_name").value;
+		document.getElementById("result").innerHTML = fullname.splitname();
+		}
+</script>
+<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+		}
+	.content{
+		margin:50px auto;
+		width:400px;
+		height:300px;
+		border:1px solid #000;
+		text-align:center;
+		padding:10px;
+		}
+	.content input[type=button]{
+		padding:2px 5px;
+		}
+	.content #result{
+		text-align:justify;
+		font-weight:bold;
+		margin-top:20px;
+		}			
+</style>
+</head>
+
+<body>
+	<div class="content">
+    	<input type="text" name="full_name" id="full_name" />
+        <input type="button" value="Tách"/ onClick="myname();">
+        <div id="result"></div>
+    </div>
+    
+</body>
+</html>

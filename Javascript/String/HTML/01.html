@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+	function myFunction(){
+		var str = document.getElementById("p1").innerHTML;
+		//var pos = str.anchor("http://www.w3schools.com/");
+		//var pos = str.link("http://www.w3schools.com/");
+		//var pos = str.big();
+		//var pos = str.small();
+		//var pos = str.bold();
+		//var pos = str.italics();
+		//var pos = str.fontsize(5);
+		//var pos = str.fontcolor("#f00");
+		var pos = str.blink();
+		document.getElementById("demo").innerHTML = pos;
+		
+		}
+</script>
+</head>
+
+<body>
+	<p id="p1">Javascript</p>
+    <button onclick="myFunction()">Click to me</button>
+    <p id="demo">Duong</p>
+</body>
+</html>
